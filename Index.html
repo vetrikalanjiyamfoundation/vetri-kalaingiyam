@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>வெற்றி களஞ்சியம் | Vetri Kalaingiyam - Government Exam Coaching Centre</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Tiro+Tamil:ital@0;1&family=Cinzel:wght@700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal-blue: #1a237e;
+    --royal-blue-dark: #0d1557;
+    --royal-blue-light: #283593;
+    --gold: #f9a825;
+    --gold-light: #ffc107;
+    --gold-dark: #e65100;
+    --white: #ffffff;
+    --off-white: #f8f7f2;
+    --text-dark: #1a1a2e;
+    --text-muted: #546e7a;
+    --green-leaf: #2e7d32;
+    --section-alt: #eef2ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', 'Noto Sans Tamil', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    background: var(--royal-blue-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 1.5rem;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .logo-circle {
+    width: 52px;
+    height: 52px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif Tamil', serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--royal-blue-dark);
+    text-align: center;
+    line-height: 1.2;
+    padding: 4px;
+    border: 2px solid var(--gold-light);
+  }
+  .nav-brand-text .tamil-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1.2;
+  }
+  .nav-brand-text .eng-name {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.9rem 1.1rem;
+    display: block;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .nav-links a:hover {
+    color: var(--gold-light);
+    background: rgba(255,255,255,0.05);
+  }
+  .nav-links a.active {
+    color: var(--gold-light);
+  }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--royal-blue-dark) !important;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem !important;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, var(--royal-blue-dark) 0%, var(--royal-blue) 50%, #1565c0 100%);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .hero-decoration {
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(249,168,37,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(249,168,37,0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(249,168,37,0.4);
+    padding: 6px 18px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .hero h1 .gold-text {
+    color: var(--gold-light);
+    display: block;
+  }
+  .hero-tagline {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .hero-reg {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.8rem;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--royal-blue-dark);
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(249,168,37,0.35);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  /* Hero Right: Stat cards */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+    backdrop-filter: blur(4px);
+  }
+  .stat-card .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .stat-card .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .stat-card.highlight {
+    background: rgba(249,168,37,0.15);
+    border-color: rgba(249,168,37,0.3);
+    grid-column: span 2;
+  }
+  .stat-card.highlight .stat-num { font-size: 1.6rem; }
+
+  /* ─── MARQUEE STRIP ─── */
+  .marquee-strip {
+    background: var(--gold);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+  }
+  .marquee-inner span {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--royal-blue-dark);
+    letter-spacing: 0.5px;
+    margin: 0 30px;
+  }
+  .marquee-inner span::before { content: '★  '; }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 1.5rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 0.6rem;
+  }
+  .section-title {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--royal-blue-dark);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .section-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ─── WHY US ─── */
+  .why-us { background: var(--off-white); }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  .feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(26,35,126,0.1); border-color: var(--gold); }
+  .feature-card:hover::before { transform: scaleX(1); }
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--section-alt);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 1rem;
+  }
+  .feature-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--royal-blue-dark);
+    margin-bottom: 0.5rem;
+  }
+  .feature-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ─── COURSES ─── */
+  .courses { background: var(--white); }
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .course-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  transition: all 0.25s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+}
+  .course-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(26,35,126,0.12); border-color: var(--royal-blue-light); }
+  .course-header {
+    background: var(--royal-blue);
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+  }
+  .course-emoji { font-size: 2rem; display: block; margin-bottom: 8px; }
+  .course-header h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+  }
+  .course-body { padding: 1.2rem; background: var(--white); flex: 1; }
+  .course-body ul {
+    list-style: none;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .course-body ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .course-body ul li::before { content: '›'; color: var(--gold-dark); font-weight: 700; font-size: 16px; }
+  .course-body ul li:last-child { border: none; }
+  .course-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: var(--section-alt);
+    color: var(--royal-blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+  }
+  .course-link:hover { background: var(--gold); color: var(--royal-blue-dark); }
+
+  /* ─── HOW WE TEACH ─── */
+  .methodology { background: var(--royal-blue-dark); padding: 5rem 1.5rem; }
+  .methodology .section-title { color: var(--white); }
+  .methodology .section-tag { color: var(--gold); }
+  .methodology .section-subtitle { color: rgba(255,255,255,0.65); }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .step-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: background 0.25s;
+  }
+  .step-card:hover { background: rgba(255,255,255,0.11); }
+  .step-num {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(249,168,37,0.25);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .step-card h3 { font-size: 16px; font-weight: 700; color: var(--gold-light); margin-bottom: 0.7rem; }
+  .step-card p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.65; }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials { background: var(--off-white); }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 2rem;
+    position: relative;
+  }
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 5rem;
+    color: var(--gold-light);
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+  }
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    padding-top: 1rem;
+    font-style: italic;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--royal-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .author-name { font-weight: 700; font-size: 14px; color: var(--royal-blue-dark); }
+  .author-post { font-size: 12px; color: var(--text-muted); }
+  .stars { color: var(--gold); font-size: 13px; margin-bottom: 4px; }
+
+  /* ─── ABOUT SECTION ─── */
+  .about { background: var(--white); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-visual {
+    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-visual::before {
+    content: 'வெற்றி';
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 8rem;
+    color: rgba(255,255,255,0.04);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+  }
+  .about-visual-title {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.4rem;
+    position: relative;
+  }
+  .about-visual-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .about-reg-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--royal-blue-dark);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 100px;
+    position: relative;
+  }
+  .about-text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+  .about-highlights {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--royal-blue-dark);
+  }
+  .highlight-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── CONTACT / ENROLL ─── */
+  .enroll {
+    background: linear-gradient(135deg, var(--royal-blue-dark) 0%, #1a237e 100%);
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .enroll h2 {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+  .enroll p { font-size: 1rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .enroll-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .contact-card .cc-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+  .contact-card .cc-label { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 1px; margin-bottom: 4px; }
+  .contact-card .cc-value { font-size: 15px; font-weight: 700; color: var(--gold-light); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--royal-blue-dark);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 3rem 1.5rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 1.5rem;
+  }
+  .footer-brand .tamil-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .footer-brand .eng-name {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .footer-brand p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  .footer-reg {
+    display: inline-block;
+    background: rgba(249,168,37,0.15);
+    color: var(--gold);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(249,168,37,0.3);
+  }
+  footer h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 10px; }
+  footer ul li a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+  footer ul li a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-bottom .reg { color: var(--gold); }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+    .section-title { font-size: 1.7rem; }
+    .video-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="https://i.ibb.co/4nmSdBSP/Chat-GPT-Image-May-7-2026-05-59-29-PM.png" alt="Vetri Kalaingiyam Logo" style="width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-light);">
+      <div class="nav-brand-text">
+        <span class="tamil-name">வெற்றி களஞ்சியம்</span>
+        <span class="eng-name">Vetri Kalanjiyam</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Results</a></li>
+      <li><a href="#contact" class="nav-cta">Enroll Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-decoration"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Reg. No. 88 / 2023</div>
+      <h1>
+        வெற்றி களஞ்சியம்
+        <span class="gold-text">Government Exam<br>Coaching Centre</span>
+      </h1>
+      <p class="hero-tagline">
+        Tamil Nadu's trusted coaching centre for TNPSC, Bank, Police, SSC, RRB & TET exams. Expert faculty. Proven results. Your success is our mission.
+      </p>
+      <p class="hero-reg">📍 Chennai, Tamil Nadu &nbsp;|&nbsp; Est. 2023</p>
+      <div class="hero-buttons">
+        <a href="#courses" class="btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn-outline">Free Demo Class</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Students Enrolled</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">6+</span>
+        <span class="stat-label">Exam Categories</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">95%</span>
+        <span class="stat-label">Student Satisfaction</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-card highlight">
+        <span class="stat-num">🏆 Govt. Registered Institute</span>
+        <span class="stat-label">Reg. No. 88/2023 — Certified & Trusted</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>TNPSC Group 1, 2, 3, 4 & VAO</span>
+    <span>Bank Exams — IBPS PO, Clerk, RRB</span>
+    <span>Police — SI & Constable</span>
+    <span>SSC — CGL, CHSL, MTS, GD, JE</span>
+    <span>RRB — NTPC & JE</span>
+    <span>TET Paper 1 & 2</span>
+    <span>Free Demo Classes Available</span>
+    <span>TNPSC Group 1, 2, 3, 4 & VAO</span>
+    <span>Bank Exams — IBPS PO, Clerk, RRB</span>
+    <span>Police — SI & Constable</span>
+    <span>SSC — CGL, CHSL, MTS, GD, JE</span>
+    <span>RRB — NTPC & JE</span>
+    <span>TET Paper 1 & 2</span>
+    <span>Free Demo Classes Available</span>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us" id="why">
+  <div class="container">
+    <div class="section-tag">Why Choose Us</div>
+    <div class="section-divider"></div>
+    <h2 class="section-title">நாங்கள் ஏன் சிறப்பானவர்கள்?</h2>
+    <p class="section-subtitle">We combine experienced faculty, structured study material, and a supportive learning environment to maximize your exam success.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">👨‍🏫</div>
+        <h3>Expert Faculty</h3>
+        <p>Experienced teachers who have appeared and succeeded in government exams themselves. Real insights, not just theory.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Comprehensive Study Material</h3>
+        <p>Specially curated Tamil & English medium notes, question banks, and previous year papers for all exams.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>Regular Mock Tests</h3>
+        <p>Weekly tests that mirror actual exam patterns to build confidence and identify your weak areas early.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Target-Focused Batches</h3>
+        <p>Small batch sizes ensure personal attention. Every student gets individual progress tracking and guidance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🗣️</div>
+        <h3>Tamil & English Medium</h3>
+        <p>Coaching available in Tamil and English medium. All aspirants are welcome regardless of educational background.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Online & Offline</h3>
+        <p>Flexible learning options — attend classes in-person or join live online sessions from wherever you are.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="section-tag">What We Teach</div>
+    <div class="section-divider"></div>
+    <h2 class="section-title">எங்கள் பாடத்திட்டங்கள்</h2>
+    <p class="section-subtitle">We cover all major government competitive exams with dedicated batches, expert coaching, and tailored study plans.</p>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-emoji">🏛️</span>
+          <h3>TNPSC</h3>
+        </div>
+        <div class="course-body">
+          <ul>
+            <li>Group 1 (Prelims + Mains)</li>
+            <li>Group 2 & 2A</li>
+            <li>Group 3</li>
+            <li>Group 4 & VAO</li>
+            <li>EO Grade 3 & 4</li>
+            <li>Jailor / Asst. Jailor</li>
+            <li>Combined Engineering</li>
+          </ul>
+        </div>
+                <a href="#contact" class="btn-primary" style="display:block; text-align:center; font-size:14px; padding:12px 22px; margin-top:1rem;">TNPSC Enroll →</a>
+      </div>
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-emoji">🏦</span>
+          <h3>Bank Exams</h3>
+        </div>
+        <div class="course-body">
+          <ul>
+            <li>IBPS PO</li>
+            <li>IBPS Clerk</li>
+            <li>IBPS SO</li>
+            <li>IBPS RRB</li>
+            <li>SBI PO & Clerk</li>
+          </ul>
+        </div>
+                <a href="#contact" class="btn-primary" style="display:block; text-align:center; font-size:14px; padding:12px 22px; margin-top:1rem;">Bank Exams Enroll →</a>
+      </div>
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-emoji">👮</span>
+          <h3>Police Exam</h3>
+        </div>
+        <div class="course-body">
+          <ul>
+            <li>Sub Inspector (SI)</li>
+            <li>Constable Exam</li>
+            <li>TNUSRB Coaching</li>
+            <li>Physical Guidance</li>
+          </ul>
+        </div>
+                <a href="#contact" class="btn-primary" style="display:block; text-align:center; font-size:14px; padding:12px 22px; margin-top:1rem;">Police Exam Enroll →</a>
+      </div>
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-emoji">🚆</span>
+          <h3>SSC & RRB</h3>
+        </div>
+        <div class="course-body">
+          <ul>
+            <li>SSC CGL & CHSL</li>
+            <li>SSC MTS, GD, JE</li>
+            <li>SSC CPO</li>
+            <li>RRB NTPC</li>
+            <li>RRB JE</li>
+          </ul>
+        </div>
+                <a href="#contact" class="btn-primary" style="display:block; text-align:center; font-size:14px; padding:12px 22px; margin-top:1rem;">SSC & RRB Enroll →</a>
+      </div>
+      <div class="course-card">
+        <div class="course-header">
+          <span class="course-emoji">📖</span>
+          <h3>TET</h3>
+        </div>
+        <div class="course-body">
+          <ul>
+            <li>TET Paper 1 (Classes 1–5)</li>
+            <li>TET Paper 2 (Classes 6–8)</li>
+            <li>Child Development & Pedagogy</li>
+            <li>Language Subjects</li>
+          </ul>
+        </div>
+                <a href="#contact" class="btn-primary" style="display:block; text-align:center; font-size:14px; padding:12px 22px; margin-top:1rem;">TET Enroll →</a>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="methodology">
+  <div class="container">
+    <div class="section-tag" style="color:var(--gold);">How We Teach</div>
+    <div class="section-divider"></div>
+    <h2 class="section-title">எங்கள் கற்பிக்கும் முறை</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.65);">A structured 4-step approach designed to take you from beginner to exam-ready with confidence.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Foundation Building</h3>
+        <p>Start with strong basics — General Knowledge, Tamil History, Indian Polity, Economy, Science & Maths fundamentals.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Concept Mastery</h3>
+        <p>Deep-dive into each syllabus topic through detailed notes, visual aids, and class discussions in Tamil & English.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Practice & Mock Tests</h3>
+        <p>Regular topic-wise tests, weekly grand tests, and full-length mock exams to simulate the real exam environment.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Doubt Clearing & Revision</h3>
+        <p>Dedicated doubt sessions, personal mentoring, and targeted revision to ensure no weak area is left behind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-visual-title">வெற்றி களஞ்சியம்</div>
+        <div class="about-visual-sub">Vetri Kalaingiyam Coaching Centre</div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:10px; padding:1.5rem; margin-bottom:1.5rem; text-align:left; position:relative;">
+          <p style="color:rgba(255,255,255,0.8); font-size:14px; line-height:1.7; margin:0;">
+            "வெற்றி" means Victory.<br>
+            "களஞ்சியம்" means Treasure Store.<br><br>
+            We are the treasure store of success — equipping thousands of aspirants with the knowledge, skills, and confidence to achieve their dream government jobs.
+          </p>
+        </div>
+        <div class="about-reg-badge">Reg. No. 88 / 2023</div>
+      </div>
+      <div class="about-text">
+        <div class="section-tag">About Us</div>
+        <div class="section-divider"></div>
+        <h2 class="section-title">நாங்கள் யார்?</h2>
+        <p>Vetri Kalaingiyam is a registered government exam coaching centre based in Chennai, Tamil Nadu. Founded in 2023, we have quickly become one of the most trusted coaching institutions in the region.</p>
+        <p>Our mission is simple: to make quality government exam coaching accessible to every aspirant regardless of their background. We believe every student who works hard deserves the right guidance to succeed.</p>
+        <p>We specialize in TNPSC, Bank Exams, Police Exams, SSC, RRB, and TET — providing comprehensive coaching in both Tamil and English medium with expert faculty and proven study methodologies.</p>
+        <div class="about-highlights">
+          <div class="highlight-item"><div class="highlight-dot"></div>Govt. Registered (Reg.88/2023)</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Tamil & English Medium</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Small Batch Sizes</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Online & Offline Classes</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Free Demo Class</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Mock Test Series</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Doubt Clearing Sessions</div>
+          <div class="highlight-item"><div class="highlight-dot"></div>Previous Year Papers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE VIDEOS -->
+<section style="padding:5rem 1.5rem; background:var(--section-alt); text-align:center;">
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <div class="section-tag">Watch & Learn</div>
+    <div class="section-divider" style="margin:0 auto;"></div>
+    <h2 class="section-title">எங்கள் வகுப்பை பாருங்கள்</h2>
+    <p class="section-subtitle" style="margin-bottom:2.5rem; text-align:center; white-space:nowrap;">Get a glimpse of our teaching style, faculty, and classroom experience before you enroll.</p>
+
+    <!-- 2x2 Video Grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto 2.5rem auto;">
+      
+      <!-- Video 1 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 6px 24px rgba(26,35,126,0.15);">
+        <iframe src="https://youtu.be/rQ0mTbDg-Zc?si=7q-UbHdvpNiSgT1G" title="2025 SI-தேர்வு தேதி மாற்றமா?"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"></iframe>
+      </div>
+
+      <!-- Video 2 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 6px 24px rgba(26,35,126,0.15);">
+        <iframe src="https://youtu.be/Pm1KtbvoEvU?si=at8kkvoTt9wXOuAK" title="SI notification Age relaxation"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"></iframe>
+      </div>
+
+      <!-- Video 3 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 6px 24px rgba(26,35,126,0.15);">
+        <iframe src="https://youtu.be/Eihs5N9FX2w?si=G2ms4mHSPOGf3Kxt" title="TNUSRB-PC,SI - 2025|OLD MODULE QUESTION & ANSWERS|TAMIL"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"></iframe>
+      </div>
+
+      <!-- Video 4 -->
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 6px 24px rgba(26,35,126,0.15);">
+        <iframe src="https://youtu.be/Zx2YtTJCFt4?si=diVtRYVna2yga4cS" title="TNUSRB - SI 2025 New update website vacancy increase ஆய்டுச்சா,TALUK -1453, AR -649, TSP -117"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px;"></iframe>
+      </div>
+
+    </div>
+
+    <!-- Show More Button -->
+    <a href="https://www.youtube.com/@VETRI_KALANJIYAM_ACADEMY" target="_blank" class="btn-primary" style="font-size:15px; padding:13px 36px;">
+      Show More →
+    </a>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-tag">Student Success</div>
+    <div class="section-divider"></div>
+    <h2 class="section-title">மாணவர்களின் கருத்துகள்</h2>
+    <p class="section-subtitle">Real words from real students who achieved their government job dreams with Vetri Kalaingiyam.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">வெற்றி களஞ்சியம் என் வாழ்க்கையை மாற்றியது. TNPSC Group 4 தேர்வில் வெற்றி பெற்றேன். ஆசிரியர்கள் மிகவும் அற்புதமாக கற்பிக்கிறார்கள்.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SK</div>
+          <div>
+            <div class="author-name">Suresh Kumar</div>
+            <div class="author-post">TNPSC Group 4 — Selected</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">The study material is excellent and the mock tests are very close to the real exam. I cleared IBPS Clerk on my first attempt thanks to this coaching centre!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PM</div>
+          <div>
+            <div class="author-name">Priya Meenakshi</div>
+            <div class="author-post">IBPS Clerk — Selected</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Police SI exam coaching was top-notch. The faculty explained every topic in detail. The doubt clearing sessions every weekend helped me a lot. Highly recommend!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RV</div>
+          <div>
+            <div class="author-name">Ravi Varma</div>
+            <div class="author-post">Police SI — Selected</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL / CONTACT -->
+<section class="enroll" id="contact">
+  <div class="container">
+    <div class="section-tag" style="color:var(--gold); text-align:center;">Get Started Today</div>
+    <h2>Join வெற்றி களஞ்சியம்</h2>
+    <p>Your government job journey starts here. Enroll now or attend a free demo class to experience our teaching first-hand.</p>
+    <div class="enroll-grid">
+      <div class="contact-card">
+        <div class="cc-icon">📞</div>
+        <div class="cc-label">Call / WhatsApp</div>
+        <div class="cc-value">+91 XXXXX XXXXX</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📧</div>
+        <div class="cc-label">Email Us</div>
+        <div class="cc-value">vetri@example.com</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📍</div>
+        <div class="cc-label">Location</div>
+        <div class="cc-value">Chennai, Tamil Nadu</div>
+      </div>
+    </div>
+    <a href="tel:+91XXXXXXXXXX" class="btn-primary" style="font-size:16px; padding:16px 40px;">Book a Free Demo Class</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+  <img src="https://i.ibb.co/4nmSdBSP/Chat-GPT-Image-May-7-2026-05-59-29-PM.png" alt="Vetri Kalaingiyam Logo" style="width:60px; height:60px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-light); margin-bottom:10px; display:block;">
+  <span class="tamil-name">வெற்றி களஞ்சியம்</span>
+  <span class="eng-name">Vetri Kalaingiyam Coaching Centre</span>
+      <p>Empowering Tamil Nadu's youth to achieve government jobs through expert coaching, structured learning, and relentless support.</p>
+      <span class="footer-reg">Reg. No. 88/2023</span>
+    </div>
+    <div>
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="#">TNPSC</a></li>
+        <li><a href="#">Bank Exams</a></li>
+        <li><a href="#">Police Exam</a></li>
+        <li><a href="#">SSC</a></li>
+        <li><a href="#">RRB</a></li>
+        <li><a href="#">TET</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Results</a></li>
+        <li><a href="#">Study Material</a></li>
+        <li><a href="#">Mock Tests</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📞 +91 XXXXX XXXXX</a></li>
+        <li><a href="#">📧 vetri@example.com</a></li>
+        <li><a href="#">📍 Chennai, TN</a></li>
+        <li><a href="#">💬 WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 வெற்றி களஞ்சியம் — Vetri Kalaingiyam. All rights reserved.</p>
+    <p class="reg">Reg. No. 88/2023 | Govt. Registered Coaching Centre</p>
+  </div>
+</footer>
+
+</body>
+</html>
