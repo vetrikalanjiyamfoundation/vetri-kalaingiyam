@@ -149,7 +149,7 @@
     margin: 0 auto;
     padding: 4rem 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 4rem;
     position: relative;
@@ -197,7 +197,139 @@
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+    margin-bottom: 1.4rem;
   }
+
+  /* ─── HERO STATS ROW (below buttons) ─── */
+  .hero-stats-row {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  .hero-stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .hero-stat-lbl {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+  .hero-stat-divider {
+    width: 1px;
+    height: 34px;
+    background: rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+
+  /* ─── HERO TRUST BADGES ─── */
+  .hero-trust {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .hero-trust-item {
+    font-size: 12.5px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  /* ─── HERO PHOTO PANEL (right side) ─── */
+  .hero-photo-panel {
+    position: relative;
+    height: 430px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(249,168,37,0.35);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  }
+  .photo-scroll-track {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    animation: photoScroll 20s linear infinite;
+    width: max-content;
+  }
+  .photo-scroll-track:hover { animation-play-state: paused; }
+  .scroll-photo {
+    width: 320px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-right: 3px solid rgba(249,168,37,0.2);
+    flex-shrink: 0;
+  }
+  @keyframes photoScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .photo-panel-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(13,21,87,0.88);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(249,168,37,0.4);
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+  }
+
+  /* Hero Right: Stat cards — KEPT for any legacy use */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+    backdrop-filter: blur(4px);
+  }
+  .stat-card .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .stat-card .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .stat-card.highlight {
+    background: rgba(249,168,37,0.15);
+    border-color: rgba(249,168,37,0.3);
+    grid-column: span 2;
+  }
+  .stat-card.highlight .stat-num { font-size: 1.6rem; }
+
   .btn-primary {
     background: var(--gold);
     color: var(--royal-blue-dark);
@@ -708,6 +840,11 @@
     .nav-links { display: none; }
     .section-title { font-size: 1.7rem; }
     .video-grid { grid-template-columns: 1fr !important; }
+    .hero-photo-panel { height: 260px; }
+    .scroll-photo { height: 160px; }
+    .hero-stats-row { flex-wrap: wrap; gap: 4px; padding: 0.7rem 0.5rem; }
+    .hero-stat-num { font-size: 1.1rem; }
+    .hero-stat-lbl { font-size: 9px; }
   }
 </style>
 </head>
@@ -737,6 +874,8 @@
 <section class="hero">
   <div class="hero-decoration"></div>
   <div class="hero-inner">
+
+    <!-- LEFT: Content -->
     <div class="hero-content">
       <div class="hero-badge">Reg. No. 88 / 2023</div>
       <h1>
@@ -744,36 +883,65 @@
         <span class="gold-text">Government Exam<br>Coaching Centre</span>
       </h1>
       <p class="hero-tagline">
-        Tamil Nadu's trusted coaching centre for TNPSC, Bank, Police, SSC, RRB & TET exams. Expert faculty. Proven results. Your success is our mission.
+        Tamil Nadu's trusted coaching centre for TNPSC, Bank, Police, SSC, RRB &amp; TET exams. Expert faculty. Proven results. Your success is our mission.
       </p>
       <p class="hero-reg">📍 Chennai, Tamil Nadu &nbsp;|&nbsp; Est. 2023</p>
+
+      <!-- Buttons -->
       <div class="hero-buttons">
         <a href="#courses" class="btn-primary">Explore Courses</a>
         <a href="#contact" class="btn-outline">Free Demo Class</a>
       </div>
+
+      <!-- Stats row — below buttons -->
+      <div class="hero-stats-row">
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">500+</span>
+          <span class="hero-stat-lbl">Students Enrolled</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">6+</span>
+          <span class="hero-stat-lbl">Exam Categories</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">95%</span>
+          <span class="hero-stat-lbl">Student Satisfaction</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">3+</span>
+          <span class="hero-stat-lbl">Years Experience</span>
+        </div>
+      </div>
+
+      <!-- Trust badges — bottom -->
+      <div class="hero-trust">
+        <div class="hero-trust-item">🏆 Govt. Registered Institute — Certified &amp; Trusted</div>
+        <div class="hero-trust-item">📚 TNPSC Group 4 &amp; VAO &nbsp;|&nbsp; RRB &nbsp;|&nbsp; Police — SI, Fire man, Jail Warden &amp; Constable</div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <span class="stat-num">500+</span>
-        <span class="stat-label">Students Enrolled</span>
+
+    <!-- RIGHT: Photo scroll panel -->
+    <div class="hero-photo-panel">
+      <div class="photo-scroll-track">
+        <!-- 5 photos — replace src with your actual image paths -->
+        <img src="photo1.jpg" alt="Coaching photo 1" class="scroll-photo">
+        <img src="photo2.jpg" alt="Coaching photo 2" class="scroll-photo">
+        <img src="photo3.jpg" alt="Coaching photo 3" class="scroll-photo">
+        <img src="photo4.jpg" alt="Coaching photo 4" class="scroll-photo">
+        <img src="photo5.jpg" alt="Coaching photo 5" class="scroll-photo">
+        <!-- Duplicated for seamless infinite loop -->
+        <img src="photo1.jpg" alt="Coaching photo 1" class="scroll-photo">
+        <img src="photo2.jpg" alt="Coaching photo 2" class="scroll-photo">
+        <img src="photo3.jpg" alt="Coaching photo 3" class="scroll-photo">
+        <img src="photo4.jpg" alt="Coaching photo 4" class="scroll-photo">
+        <img src="photo5.jpg" alt="Coaching photo 5" class="scroll-photo">
       </div>
-      <div class="stat-card">
-        <span class="stat-num">6+</span>
-        <span class="stat-label">Exam Categories</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">95%</span>
-        <span class="stat-label">Student Satisfaction</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">3+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-card highlight">
-        <span class="stat-num">🏆 Govt. Registered Institute</span>
-        <span class="stat-label">Reg. No. 88/2023 — Certified & Trusted</span>
-      </div>
+      <div class="photo-panel-badge">🎓 Our Students &amp; Classes</div>
     </div>
+
   </div>
 </section>
 
