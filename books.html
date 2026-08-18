@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>எங்கள் புத்தகங்கள் | Books - Vetri Kalaingiyam Government Exam Coaching Centre</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Cinzel:wght@700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal-blue: #1a237e; --royal-blue-dark: #0d1557; --royal-blue-light: #283593;
+    --gold: #f9a825; --gold-light: #ffc107; --gold-dark: #e65100;
+    --white: #ffffff; --off-white: #f8f7f2; --text-dark: #1a1a2e; --text-muted: #546e7a;
+    --green-leaf: #2e7d32; --section-alt: #eef2ff; --whatsapp: #25D366;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family:'Lato','Noto Sans Tamil',sans-serif; color:var(--text-dark); background:var(--white); overflow-x:hidden; }
+
+  nav { background:var(--royal-blue-dark); position:sticky; top:0; z-index:1000; box-shadow:0 2px 20px rgba(0,0,0,0.3); }
+  .nav-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1.5rem; }
+  .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .nav-brand-text .tamil-name { font-family:'Noto Serif Tamil',serif; font-weight:700; font-size:16px; color:var(--gold-light); display:block; line-height:1.2; }
+  .nav-brand-text .eng-name { font-size:11px; color:rgba(255,255,255,0.7); letter-spacing:1px; text-transform:uppercase; }
+  .nav-links { display:flex; gap:0; list-style:none; }
+  .nav-links a { color:rgba(255,255,255,0.85); text-decoration:none; font-size:13.5px; font-weight:600; letter-spacing:0.5px; padding:0.9rem 1.1rem; display:block; transition:all 0.2s; }
+  .nav-links a:hover { color:var(--gold-light); background:rgba(255,255,255,0.05); }
+  .nav-links a.active { color:var(--gold-light); }
+  .nav-cta { background:var(--gold); color:var(--royal-blue-dark) !important; border-radius:4px; padding:0.6rem 1.2rem !important; font-weight:700 !important; }
+  .nav-cta:hover { background:var(--gold-light) !important; }
+
+  .page-header { background:linear-gradient(135deg, var(--royal-blue-dark) 0%, var(--royal-blue) 50%, #1565c0 100%); padding:3.5rem 1.5rem 3rem; position:relative; overflow:hidden; text-align:center; }
+  .page-header::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity:0.4; }
+  .page-header-inner { position:relative; z-index:1; max-width:900px; margin:0 auto; }
+  .breadcrumb { font-size:12.5px; color:rgba(255,255,255,0.6); margin-bottom:1rem; letter-spacing:0.5px; }
+  .breadcrumb a { color:rgba(255,255,255,0.6); text-decoration:none; }
+  .breadcrumb a:hover { color:var(--gold-light); }
+  .page-header-badge { display:inline-block; background:rgba(249,168,37,0.15); color:var(--gold-light); border:1px solid rgba(249,168,37,0.4); padding:6px 18px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:1.2rem; }
+  .page-header h1 { font-family:'Noto Serif Tamil',serif; font-size:2.6rem; font-weight:700; color:var(--white); line-height:1.25; margin-bottom:0.6rem; }
+  .page-header p { font-size:1rem; color:rgba(255,255,255,0.75); max-width:620px; margin:0 auto; line-height:1.7; }
+
+  section { padding:5rem 1.5rem; }
+  .container { max-width:1200px; margin:0 auto; }
+  .section-tag { font-size:12px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:0.6rem; text-align:center; }
+  .section-title { font-family:'Noto Serif Tamil',serif; font-size:2rem; font-weight:700; color:var(--royal-blue-dark); margin-bottom:0.8rem; line-height:1.3; text-align:center; }
+  .section-subtitle { font-size:1rem; color:var(--text-muted); max-width:600px; line-height:1.7; margin:0 auto 3rem; text-align:center; }
+  .section-divider { width:60px; height:4px; background:var(--gold); border-radius:2px; margin:0 auto 1.2rem; }
+
+  .books-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:28px; }
+  .book-card { background:var(--white); border:1px solid #e6e6e6; border-radius:16px; overflow:hidden; transition:all 0.25s; display:flex; flex-direction:column; }
+  .book-card:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(26,35,126,0.14); border-color:var(--gold); }
+  .book-cover {
+    aspect-ratio: 3/4;
+    background:linear-gradient(155deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    position:relative; overflow:hidden; padding:1.5rem; text-align:center;
+  }
+  .book-cover::before { content:''; position:absolute; inset:8px; border:1.5px solid rgba(249,168,37,0.4); border-radius:6px; pointer-events:none; }
+  .book-cover-icon { font-size:2.8rem; margin-bottom:0.8rem; }
+  .book-cover-title { font-family:'Noto Serif Tamil',serif; font-weight:700; font-size:14px; color:var(--gold-light); line-height:1.4; }
+  .book-cover-badge { position:absolute; top:14px; right:14px; background:var(--gold); color:var(--royal-blue-dark); font-size:10px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:100px; }
+  .book-card-body { padding:1.3rem 1.3rem 1.1rem; flex:1; display:flex; flex-direction:column; }
+  .book-card-body h3 { font-size:15.5px; font-weight:700; color:var(--royal-blue-dark); margin-bottom:0.5rem; line-height:1.4; }
+  .book-card-body p { font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:1rem; flex:1; }
+  .book-card-footer { display:flex; align-items:center; justify-content:space-between; padding:0 1.3rem 1.3rem; }
+  .book-price { font-family:'Cinzel',serif; font-weight:900; font-size:18px; color:var(--gold-dark); }
+  .book-price::before { content:'₹'; font-size:14px; }
+  .book-view-btn { background:var(--section-alt); color:var(--royal-blue); font-size:12.5px; font-weight:700; padding:9px 16px; border-radius:8px; text-decoration:none; transition:background 0.2s; }
+  .book-view-btn:hover { background:var(--gold); color:var(--royal-blue-dark); }
+
+  .enroll { background:linear-gradient(135deg, var(--royal-blue-dark) 0%, #1a237e 100%); padding:5rem 1.5rem; text-align:center; }
+  .enroll h2 { font-family:'Noto Serif Tamil',serif; font-size:2.2rem; font-weight:700; color:var(--white); margin-bottom:0.8rem; }
+  .enroll p { font-size:1rem; color:rgba(255,255,255,0.7); margin-bottom:2.5rem; max-width:520px; margin-left:auto; margin-right:auto; }
+  .btn-primary { background:var(--gold); color:var(--royal-blue-dark); padding:14px 30px; border-radius:6px; font-weight:700; font-size:15px; text-decoration:none; transition:all 0.2s; display:inline-block; box-shadow:0 4px 15px rgba(249,168,37,0.35); }
+  .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); }
+
+  footer { background:var(--royal-blue-dark); border-top:1px solid rgba(255,255,255,0.08); padding:3rem 1.5rem 2rem; }
+  .footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; padding-bottom:2rem; border-bottom:1px solid rgba(255,255,255,0.08); margin-bottom:1.5rem; }
+  .footer-brand .tamil-name { font-family:'Noto Serif Tamil',serif; font-weight:700; font-size:20px; color:var(--gold-light); display:block; margin-bottom:4px; }
+  .footer-brand .eng-name { font-size:12px; color:rgba(255,255,255,0.5); letter-spacing:1px; text-transform:uppercase; display:block; margin-bottom:1rem; }
+  .footer-brand p { font-size:13px; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:0.8rem; }
+  .footer-reg { display:inline-block; background:rgba(249,168,37,0.15); color:var(--gold); padding:4px 12px; border-radius:4px; font-size:12px; font-weight:700; border:1px solid rgba(249,168,37,0.3); }
+  footer h4 { font-size:13px; font-weight:700; color:var(--gold-light); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:1rem; }
+  footer ul { list-style:none; }
+  footer ul li { margin-bottom:10px; }
+  footer ul li a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:13px; }
+  footer ul li a:hover { color:var(--gold-light); }
+  .footer-bottom { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+  .footer-bottom p { font-size:12px; color:rgba(255,255,255,0.35); }
+  .footer-bottom .reg { color:var(--gold); }
+
+  @media (max-width:768px) {
+    .nav-links { display:none; }
+    .page-header h1 { font-size:1.9rem; }
+    .footer-inner { grid-template-columns:1fr 1fr; gap:2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://i.ibb.co/4nmSdBSP/Chat-GPT-Image-May-7-2026-05-59-29-PM.png" alt="Vetri Kalaingiyam Logo" style="width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-light);">
+      <div class="nav-brand-text">
+        <span class="tamil-name">வெற்றி களஞ்சியம்</span>
+        <span class="eng-name">Vetri Kalanjiyam</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="books.html" class="active">Books</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Enroll Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Books</div>
+    <div class="page-header-badge">6 Study Books · Reg. No. 88/2023</div>
+    <h1>எங்கள் புத்தகங்கள்<br><span style="color:var(--gold-light); font-size:0.6em;">Our Books</span></h1>
+    <p>Exam-focused question banks covering Tamil, Social Science, Science and Psychology — built for TNUSRB Police PC &amp; SI aspirants. Tap any book to see full details and order.</p>
+  </div>
+</section>
+
+<section style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-tag">Study Material</div>
+    <div class="section-divider"></div>
+    <h2 class="section-title">அனைத்து புத்தகங்களும்</h2>
+    <p class="section-subtitle">Six exam-oriented question banks — each priced at ₹199. Tap a book to view full details and order via WhatsApp.</p>
+    <div class="books-grid">
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">📕</div>
+          <div class="book-cover-title">General Tamil<br>Question Bank</div>
+        </div>
+        <div class="book-card-body">
+          <h3>General Tamil Question Bank</h3>
+          <p>6th–10th Std General Tamil — one-question/one-answer format, 167 pages. Literature, grammar, poets &amp; authors.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-general-tamil.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">🌍</div>
+          <div class="book-cover-title">Social Science<br>Question Bank</div>
+        </div>
+        <div class="book-card-body">
+          <h3>Social Science Question Bank — Lesson-wise Edition</h3>
+          <p>6th–10th Std Social Science, 134 lessons, up to 322 pages. History, Geography, Civics, Economics &amp; more.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-social-science-lessonwise.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">🔬</div>
+          <div class="book-cover-title">Science<br>Question Bank</div>
+        </div>
+        <div class="book-card-body">
+          <h3>Science Question Bank</h3>
+          <p>6th–10th Std Science, 5000+ one-word questions, 112 pages. Physics, Chemistry, Biology &amp; Environmental Science.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-science.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">🧠</div>
+          <div class="book-cover-title">Psychology<br>Question Bank</div>
+        </div>
+        <div class="book-card-body">
+          <h3>Psychology Question Bank</h3>
+          <p>27 important topics, 69 pages. Reasoning, verbal &amp; logical practice designed for TNUSRB PC &amp; SI.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-psychology.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">🗺️</div>
+          <div class="book-cover-title">Social Science<br>5000+ Questions</div>
+        </div>
+        <div class="book-card-body">
+          <h3>Social Science Question Bank — 5000+ One-Line Questions</h3>
+          <p>6th–10th Std, 5000+ one-line questions, 94 pages. History, Geography, Political Science &amp; Economics.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-social-science-5000.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <div class="book-cover-badge">PDF</div>
+          <div class="book-cover-icon">📘</div>
+          <div class="book-cover-title">பொதுத்தமிழ்<br>5000+ வினா-விடை</div>
+        </div>
+        <div class="book-card-body">
+          <h3>பொதுத்தமிழ் — 5000+ ஒருவரி வினா-விடைகள்</h3>
+          <p>6th–10th Std General Tamil, 5000+ one-line Q&amp;A, 85 pages. இலக்கியம், இலக்கணம், திருக்குறள் &amp; more.</p>
+        </div>
+        <div class="book-card-footer">
+          <span class="book-price">199</span>
+          <a href="book-podhuthamil.html" class="book-view-btn">View Details →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="enroll" id="contact">
+  <div class="container">
+    <div class="section-tag" style="color:var(--gold);">Need Help Choosing?</div>
+    <h2>Not Sure Which Book You Need?</h2>
+    <p>Message us on WhatsApp and we'll help you pick the right book — or bundle all 6 for complete preparation.</p>
+    <a href="https://wa.me/917338707503?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20books" class="btn-primary" target="_blank">💬 Chat on WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://i.ibb.co/4nmSdBSP/Chat-GPT-Image-May-7-2026-05-59-29-PM.png" alt="Vetri Kalaingiyam Logo" style="width:60px; height:60px; border-radius:50%; object-fit:cover; border:2px solid var(--gold-light); margin-bottom:10px; display:block;">
+      <span class="tamil-name">வெற்றி களஞ்சியம்</span>
+      <span class="eng-name">Vetri Kalaingiyam Coaching Centre</span>
+      <p>Empowering Tamil Nadu's youth to achieve government jobs through expert coaching, structured learning, and relentless support.</p>
+      <span class="footer-reg">Reg. No. 88/2023</span>
+    </div>
+    <div>
+      <h4>Books</h4>
+      <ul>
+        <li><a href="book-general-tamil.html">General Tamil</a></li>
+        <li><a href="book-social-science-lessonwise.html">Social Science</a></li>
+        <li><a href="book-science.html">Science</a></li>
+        <li><a href="book-psychology.html">Psychology</a></li>
+        <li><a href="book-podhuthamil.html">பொதுத்தமிழ்</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#testimonials">Results</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+917338707503">📞 +91 73387 07503</a></li>
+        <li><a href="mailto:vetri@example.com">📧 vetri@example.com</a></li>
+        <li><a href="index.html#contact">📍 Chennai, TN</a></li>
+        <li><a href="https://wa.me/917338707503" target="_blank">💬 WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 வெற்றி களஞ்சியம் — Vetri Kalaingiyam. All rights reserved.</p>
+    <p class="reg">Reg. No. 88/2023 | Govt. Registered Coaching Centre</p>
+  </div>
+</footer>
+
+</body>
+</html>
