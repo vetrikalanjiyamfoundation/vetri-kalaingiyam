@@ -852,6 +852,62 @@
     .hero-stat-num { font-size: 1.1rem; }
     .hero-stat-lbl { font-size: 9px; }
   }
+
+  /* ─── SIMPLE BOOK CARDS ─── */
+.books-simple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+.book-simple-card {
+  background: var(--white);
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.25s;
+}
+.book-simple-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(26,35,126,0.14);
+  border-color: var(--gold);
+}
+.book-simple-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(155deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
+}
+.book-simple-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--royal-blue-dark);
+  padding: 1rem 1rem 0.3rem;
+  line-height: 1.4;
+  min-height: 44px;
+}
+.book-simple-price {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--gold-dark);
+  margin-bottom: 0.9rem;
+}
+.book-simple-price::before { content: '₹'; font-size: 12px; }
+.book-simple-btn {
+  display: block;
+  margin: 0 1rem 1.2rem;
+  background: var(--gold);
+  color: var(--royal-blue-dark);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.book-simple-btn:hover { background: var(--gold-light); }
 </style>
 </head>
 <body>
