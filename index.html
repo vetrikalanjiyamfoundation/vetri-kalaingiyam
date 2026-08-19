@@ -854,60 +854,60 @@
   }
 
   /* ─── SIMPLE BOOK CARDS ─── */
-.books-simple-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-}
-.book-simple-card {
-  background: var(--white);
-  border: 1px solid #e0e0e0;
-  border-radius: 14px;
-  overflow: hidden;
-  text-align: center;
-  transition: all 0.25s;
-}
-.book-simple-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 32px rgba(26,35,126,0.14);
-  border-color: var(--gold);
-}
-.book-simple-img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-  background: linear-gradient(155deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
-}
-.book-simple-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--royal-blue-dark);
-  padding: 1rem 1rem 0.3rem;
-  line-height: 1.4;
-  min-height: 44px;
-}
-.book-simple-price {
-  font-family: 'Cinzel', serif;
-  font-weight: 900;
-  font-size: 15px;
-  color: var(--gold-dark);
-  margin-bottom: 0.9rem;
-}
-.book-simple-price::before { content: '₹'; font-size: 12px; }
-.book-simple-btn {
-  display: block;
-  margin: 0 1rem 1.2rem;
-  background: var(--gold);
-  color: var(--royal-blue-dark);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-.book-simple-btn:hover { background: var(--gold-light); }
+  .books-simple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  .book-simple-card {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .book-simple-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(26,35,126,0.14);
+    border-color: var(--gold);
+  }
+  .book-simple-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(155deg, var(--royal-blue) 0%, var(--royal-blue-dark) 100%);
+  }
+  .book-simple-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--royal-blue-dark);
+    padding: 1rem 1rem 0.3rem;
+    line-height: 1.4;
+    min-height: 44px;
+  }
+  .book-simple-price {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--gold-dark);
+    margin-bottom: 0.9rem;
+  }
+  .book-simple-price::before { content: '₹'; font-size: 12px; }
+  .book-simple-btn {
+    display: block;
+    margin: 0 1rem 1.2rem;
+    background: var(--gold);
+    color: var(--royal-blue-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .book-simple-btn:hover { background: var(--gold-light); }
 </style>
 </head>
 <body>
@@ -1167,97 +1167,50 @@
     <div class="section-divider" style="margin:0 auto;"></div>
     <h2 class="section-title">எங்கள் புத்தகங்கள்</h2>
     <p class="section-subtitle">Six exam-focused question banks covering Tamil, Social Science, Science and Psychology — each priced at ₹199.</p>
-    <div class="courses-grid">
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">📕</span>
-          <h3>GENERAL TAMIL</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>6th–10th Std General Tamil</li>
-            <li>One-Q/One-A format</li>
-            <li>167 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-general-tamil.html" class="course-link">View Book →</a>
+    <div class="books-simple-grid">
+
+      <div class="book-simple-card">
+        <img src="book-general-tamil-cover.jpg" alt="General Tamil Question Bank" class="book-simple-img">
+        <div class="book-simple-title">General Tamil Question Bank</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-general-tamil.html" class="book-simple-btn">View Book →</a>
       </div>
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">🌍</span>
-          <h3>SOCIAL SCIENCE</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>6th–10th Std · 134 lessons</li>
-            <li>Book-back Q&A</li>
-            <li>322 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-social-science-lessonwise.html" class="course-link">View Book →</a>
+
+      <div class="book-simple-card">
+        <img src="book-social-science-1-cover.jpg" alt="Social Science Question Bank" class="book-simple-img">
+        <div class="book-simple-title">Social Science Question Bank</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-social-science-lessonwise.html" class="book-simple-btn">View Book →</a>
       </div>
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">🔬</span>
-          <h3>SCIENCE</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>6th–10th Std Science</li>
-            <li>5000+ one-word Q&A</li>
-            <li>112 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-science.html" class="course-link">View Book →</a>
+
+      <div class="book-simple-card">
+        <img src="book-science-cover.jpg" alt="Science Question Bank" class="book-simple-img">
+        <div class="book-simple-title">Science Question Bank</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-science.html" class="book-simple-btn">View Book →</a>
       </div>
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">🧠</span>
-          <h3>PSYCHOLOGY</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>27 important topics</li>
-            <li>Reasoning & verbal</li>
-            <li>69 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-psychology.html" class="course-link">View Book →</a>
+
+      <div class="book-simple-card">
+        <img src="book-psychology-cover.jpg" alt="Psychology Question Bank" class="book-simple-img">
+        <div class="book-simple-title">Psychology Question Bank</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-psychology.html" class="book-simple-btn">View Book →</a>
       </div>
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">🗺️</span>
-          <h3>SOCIAL SCIENCE 5000+</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>6th–10th Std · 5000+ Q</li>
-            <li>History, Geo, Civics</li>
-            <li>94 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-social-science-5000.html" class="course-link">View Book →</a>
+
+      <div class="book-simple-card">
+        <img src="book-social-science-2-cover.jpg" alt="Social Science 5000+ Questions" class="book-simple-img">
+        <div class="book-simple-title">Social Science — 5000+ Questions</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-social-science-5000.html" class="book-simple-btn">View Book →</a>
       </div>
-      <div class="course-card">
-        <div class="course-header">
-          <span class="course-emoji">📘</span>
-          <h3>பொதுத்தமிழ்</h3>
-        </div>
-        <div class="course-body">
-          <ul>
-            <li>6th–10th Std · 5000+ Q</li>
-            <li>இலக்கியம் & இலக்கணம்</li>
-            <li>85 pages</li>
-            <li>₹199</li>
-          </ul>
-        </div>
-        <a href="book-podhuthamil.html" class="course-link">View Book →</a>
+
+      <div class="book-simple-card">
+        <img src="book-podhuthamil-cover.jpg" alt="பொதுத்தமிழ் Question Bank" class="book-simple-img">
+        <div class="book-simple-title">பொதுத்தமிழ் — 5000+ வினா-விடை</div>
+        <div class="book-simple-price">199</div>
+        <a href="book-podhuthamil.html" class="book-simple-btn">View Book →</a>
       </div>
+
     </div>
     <a href="books.html" class="btn-primary" style="margin-top:2.5rem; display:inline-block;">View All Books →</a>
   </div>
